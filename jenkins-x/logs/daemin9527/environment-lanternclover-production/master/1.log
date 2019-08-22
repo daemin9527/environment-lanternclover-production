@@ -1,0 +1,40 @@
+Step: step-credential-initializer-l5x8f:
+
+{"level":"warn","ts":1566476737.6807835,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566476737.68189,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-7j8wg:
+
+{"level":"warn","ts":1566476738.6923811,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1566476738.6942246,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-daemin9527-environment-lan-s6wnc:
+
+{"level":"warn","ts":1566476744.8518376,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566476746.3104377,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/daemin9527/environment-lanternclover-production.git @ 09954a8d7a0cd136326885c3f7c46360353c8ec0 in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:09954a8d7a0cd136326885c3f7c46360353c8ec0","time":"2019-08-22T12:25:47Z"}
+{"level":"warning","msg":"no SHAs to merge, falling back to initial cloned commit","time":"2019-08-22T12:25:47Z"}
+Step: step-merge-pull-refs:
+
+SKIP merge-pull-refs: Nothing to merge
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-22T12:25:48Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-08-22T12:25:48Z"}
+{"level":"info","msg":"selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-08-22T12:25:52Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-promotion-effective.yml","time":"2019-08-22T12:25:56Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"running command: ** step next-version --use-git-tag-only --tag","time":"2019-08-22T12:25:58Z"}
+{"level":"info","msg":"created new version: 0.0.1 and written to file: ./VERSION","time":"2019-08-22T12:26:00Z"}
+{"level":"info","msg":"Tag v0.0.1 created and pushed to remote origin","time":"2019-08-22T12:26:03Z"}
+{"level":"info","msg":"","time":"2019-08-22T12:26:03Z"}
+{"level":"info","msg":"PipelineActivity for daemin9527-environment-lanternclover-production-master-1","time":"2019-08-22T12:26:03Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-22T12:26:03Z"}
+{"level":"info","msg":"upserted PipelineResource daemin9527-environment-lanternc for the git repository https://github.com/daemin9527/environment-lanternclover-production.git and branch master","time":"2019-08-22T12:26:03Z"}
+{"level":"info","msg":"upserted Task daemin9527-environment-lanternc-vzv7t-from-build-pack-1","time":"2019-08-22T12:26:03Z"}
+{"level":"info","msg":"upserted Pipeline daemin9527-environment-lanternc-vzv7t-1","time":"2019-08-22T12:26:03Z"}
+{"level":"info","msg":"created PipelineRun daemin9527-environment-lanternc-vzv7t-1","time":"2019-08-22T12:26:03Z"}
+{"level":"info","msg":"created PipelineStructure daemin9527-environment-lanternc-vzv7t-1","time":"2019-08-22T12:26:03Z"}
